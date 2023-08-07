@@ -9,6 +9,9 @@ function createBoard(size){
 
     for(let i = 0; i < area; i++){
         let square = document.createElement("div");
+        square.addEventListener("mouseover", () => {
+            square.style.backgroundColor = "black";
+        })
         square.style.backgroundColor = "lightblue";
         board.insertAdjacentElement("beforeend", square);
     }
@@ -23,7 +26,13 @@ createBoard(16);
 
 
 function changeBoardSize(input){
-    createBoard(input);
+    console.log(input);
+    if(input >= 2 && input <= 100){
+        createBoard(input);
+    }
+    else{
+        alert("Enter a number between 2 and 100");
+    }
 }
 
 
