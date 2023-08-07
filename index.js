@@ -12,7 +12,7 @@ function createBoard(size){
         square.addEventListener("mouseover", () => {
             square.style.backgroundColor = "black";
         })
-        square.style.backgroundColor = "lightblue";
+        square.style.backgroundColor = "white";
         board.insertAdjacentElement("beforeend", square);
     }
 }
